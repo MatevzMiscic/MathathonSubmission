@@ -1,0 +1,61 @@
+-- v_2 on Q, coordinates in Q, seed 2026: all assertions passed (212 s)
+     instances                                                              2000
+     triangles                                                              31147
+     max triangles                                                          31
+     T-junction incidences                                                  9399
+     instances with a T-junction                                            1918
+     joins                                                                  28084
+     swaps                                                                  154899
+     adds                                                                   55361
+     bound attained (v(S) = v(2)+nu)                                        102
+     polygons: {'unit square': 335, 'U-pentomino': 107, 'L-tromino': 75, 'parallelogram': 341, 'centrally symmetric hexagon': 318, 'centrally symmetric octagon': 348, 'plus-pentomino': 103, 'L-tetromino': 105, 'P-pentomino': 86, 'S-tetromino': 80, 'T-tetromino': 102}
+-- v_3 on Q, coordinates in Q, seed 2027: all assertions passed (137 s)
+     instances                                                              1000
+     triangles                                                              15488
+     max triangles                                                          30
+     T-junction incidences                                                  4779
+     instances with a T-junction                                            957
+     joins                                                                  14081
+     swaps                                                                  97432
+     adds                                                                   27917
+     bound attained (v(S) = v(2)+nu)                                        212
+     instances with v_p(S) < v_p(p) + nu (no factor p is gained)            212
+     polygons: {'unit square': 171, 'centrally symmetric octagon': 187, 'centrally symmetric hexagon': 164, 'T-tetromino': 48, 'parallelogram': 171, 'U-pentomino': 32, 'S-tetromino': 40, 'plus-pentomino': 51, 'P-pentomino': 48, 'L-tetromino': 49, 'L-tromino': 39}
+-- v_5 on Q, coordinates in Q, seed 2028: all assertions passed (162 s)
+     instances                                                              1000
+     triangles                                                              15795
+     max triangles                                                          31
+     T-junction incidences                                                  4891
+     instances with a T-junction                                            966
+     joins                                                                  14373
+     swaps                                                                  115726
+     adds                                                                   28731
+     bound attained (v(S) = v(2)+nu)                                        318
+     instances with v_p(S) < v_p(p) + nu (no factor p is gained)            318
+     polygons: {'centrally symmetric hexagon': 153, 'U-pentomino': 53, 'centrally symmetric octagon': 168, 'parallelogram': 192, 'plus-pentomino': 53, 'P-pentomino': 50, 'unit square': 160, 'T-tetromino': 44, 'L-tromino': 40, 'S-tetromino': 40, 'L-tetromino': 47}
+-- v at the inert prime 2 of Q(sqrt5), coordinates in Q(sqrt5), seed 2029: all assertions passed (165 s)
+     instances                                                              400
+     triangles                                                              5372
+     max triangles                                                          25
+     T-junction incidences                                                  1422
+     instances with a T-junction                                            378
+     joins                                                                  4718
+     swaps                                                                  23633
+     adds                                                                   9463
+     bound attained (v(S) = v(2)+nu)                                        12
+     instances with an ODD number of triangles of minimal valuation         7
+     polygons: {'S-tetromino': 22, 'L-tetromino': 20, 'unit square': 67, 'centrally symmetric hexagon': 63, 'T-tetromino': 18, 'centrally symmetric octagon': 77, 'plus-pentomino': 20, 'L-tromino': 23, 'parallelogram': 51, 'P-pentomino': 21, 'U-pentomino': 18}
+-- v at the ramified prime sqrt2 of Q(sqrt2), v(2) = 2, coordinates in Q(sqrt2), seed 2030: all assertions passed (140 s)
+     instances                                                              400
+     triangles                                                              5262
+     max triangles                                                          27
+     T-junction incidences                                                  1435
+     instances with a T-junction                                            370
+     joins                                                                  4621
+     swaps                                                                  22750
+     adds                                                                   9271
+     bound attained (v(S) = v(2)+nu)                                        20
+     polygons: {'centrally symmetric hexagon': 71, 'unit square': 67, 'T-tetromino': 22, 'parallelogram': 70, 'S-tetromino': 14, 'centrally symmetric octagon': 67, 'L-tetromino': 13, 'plus-pentomino': 21, 'L-tromino': 18, 'P-pentomino': 19, 'U-pentomino': 18}
+-- 4000 fans of the unit square from random points of Q(sqrt5)^2 (seed 2031): residue sum 0 in F_4 and merging procedure passed in all; ODD number of triangles of minimal valuation in 40
+RANDOM RUNS OK
+exit 0

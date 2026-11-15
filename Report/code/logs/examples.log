@@ -1,0 +1,41 @@
+== Example: Lemma T needs 'u longest' (v = v_2)
+  v(det(u,w)) = 1  v(det(u,w')) = 1  v(det(w,w')) = 0
+== Example: the unit square cut by a diagonal, v = v_2
+  t1 = ((1,0), (0,1), (-1,-1))  t2 = ((1,1), (-1,0), (0,-1))  S = 2
+  join: ((1,0), (0,1), (-1,-1), (1,1), (-1,0), (0,-1))  bracket 2
+  swap: move u'=(-1, 0) left past the block ((0,1), (-1,-1), (1,1)) (sum (0, 1)):
+        new sequence ((1,0), (-1,0), (0,1), (-1,-1), (1,1), (0,-1))  bracket 0  change -2  = -2 det(sum of block, u') = -2
+  add:  ((0,0), (0,1), (-1,-1), (1,1), (0,-1))  bracket 0
+  full procedure: {'joins': 1, 'swaps': 5, 'adds': 3, 'deviations': 0, 'cost': 2, 'nu': 0, 'S': 2, 'bound_ok': True}
+== Example: T-junction.  Square [0,4]^2, diagonal (0,0)-(4,4), segment (4,0)-M, M=(2,2); v = v_2
+  B  ((4,4), (-4,0), (0,-4))  2*area = 16
+  A1 ((4,0), (-2,2), (-2,-2))  2*area = 8
+  A2 ((0,4), (-2,-2), (2,-2))  2*area = 8
+   join S=32   ((4,4), (-4,0), (0,-4)) ; ((4,0), (-2,2), (-2,-2), (0,4), (-2,-2), (2,-2))
+   swap S=16   ((4,4), (-4,0), (0,-4)) ; ((4,0), (-2,2), (2,-2), (-2,-2), (0,4), (-2,-2))
+   add  S=16   ((4,4), (-4,0), (0,-4)) ; ((4,0), (0,0), (-2,-2), (0,4), (-2,-2))
+   swap S=0    ((4,4), (-4,0), (0,-4)) ; ((4,0), (-2,-2), (-2,-2), (0,4))
+   add  S=0    ((4,4), (-4,0), (0,-4)) ; ((4,0), (-4,-4), (0,4))
+   join S=0    ((4,4), (-4,0), (0,-4), (4,0), (-4,-4), (0,4))
+   swap S=32   ((4,4), (-4,-4), (-4,0), (0,-4), (4,0), (0,4))
+   add  S=32   ((0,0), (-4,0), (0,-4), (4,0), (0,4))
+   swap S=0    ((-4,0), (4,0), (0,-4), (0,4))
+   add  S=0    ((0,0), (0,-4), (0,4))
+   swap S=0    ((0,-4), (0,4))
+   add  S=0    ((0,0))
+  result: {'joins': 2, 'swaps': 8, 'adds': 5, 'deviations': 0, 'cost': 32, 'nu': 3, 'S': 32, 'bound_ok': True}  v(S) = 5 >= v(2)+nu = 4
+== Example: the fan in Q(sqrt5); cone the unit square from (phi-1, 1/3)
+  bottom 2*area = 1/3                    v = 0
+  right  2*area = (3/2 - 1/2*sqrt5)      v = 0
+  top    2*area = 2/3                    v = 1
+  left   2*area = (-1/2 + 1/2*sqrt5)     v = 0
+  residues of (2 area)/c, c = 1/3, in F_4 as (x mod 2, y mod 2) for x + y*phi: [(1, 0), (0, 1), (1, 1)]
+  number of triangles of minimal valuation: 3  sum of residues: (0, 0)
+  merging procedure: {'joins': 3, 'swaps': 13, 'adds': 6, 'deviations': 0, 'cost': 2, 'nu': 0, 'S': 2, 'bound_ok': True}  v(S) = 1
+== Example: the trapezoid (0,0),(2,0),(1,1),(0,1) (not special), 3 triangles of area 1/2
+  S = 3  v_2(S) = 0  < v(2)+nu = 1 ; family balanced: False
+  merging procedure stops with: input not balanced
+== The valuations on Q(sqrt5), Q(sqrt2): axioms (V2), (V3) on random elements
+  v at the inert prime 2 of Q(sqrt5): 4998 random pairs OK
+  v at the ramified prime sqrt2 of Q(sqrt2), v(2) = 2: 5000 random pairs OK
+ALL EXAMPLES OK

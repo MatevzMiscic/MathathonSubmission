@@ -11,10 +11,11 @@
 !/Report/code/
 /Report/code/__pycache__/
 
-# Slides
-!/Slides/
-/Slides/*
-!/Slides/slides.pdf
+# Presentation
+!/Presentation/
+/Presentation/*
+!/Presentation/presentation.tex
+!/Presentation/presentation.pdf
 
 # Lean library "Stein"
 !/Lean/
