@@ -1,0 +1,1 @@
+import MathathonProblems.P67_Monsky

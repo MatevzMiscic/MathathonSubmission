@@ -1,0 +1,14 @@
+name = "MathathonProblems"
+defaultTargets = ["MathathonProblems"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.35.0"
+
+[[require]]
+name = "Stein"
+path = "../Lean"
+
+[[lean_lib]]
+name = "MathathonProblems"

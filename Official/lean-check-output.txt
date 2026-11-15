@@ -1,0 +1,30 @@
+Build and axiom check of Official/ (Problem 67, official statement), 2026-11-15T04:31:01Z
+Toolchain: leanprover/lean4:v4.35.0; Mathlib v4.35.0 (rev 56a005855ea17e0b0958f73ec801ae140b0a1679); team library ../Lean (package Stein)
+Note: .lake/packages was a symlink to ../Lean/.lake/packages (same revisions as lake-manifest.json) instead of a fresh download.
+
+$ lake build
+⚠ [9059/9061] Built MathathonProblems.P67_Monsky (10s)
+✔ [9060/9061] Built MathathonProblems (3.8s)
+Build completed successfully (9061 jobs).
+
+$ lake env lean AxiomCheck.lean
+Mathathon.P67.Monsky : ∀ (n : ℕ),
+  (∃ S,
+      Mathathon.P67.closed_hull Mathathon.P67.unit_square = ⋃ Δ ∈ S, Mathathon.P67.closed_hull Δ ∧
+        (↑S).PairwiseDisjoint Mathathon.P67.open_hull ∧
+          (∀ Δ₁ ∈ S,
+              ∀ Δ₂ ∈ S,
+                MeasureTheory.volume (Mathathon.P67.open_hull Δ₁) = MeasureTheory.volume (Mathathon.P67.open_hull Δ₂)) ∧
+            S.card = n) ↔
+    n ≠ 0 ∧ Even n
+'Mathathon.P67.Monsky' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+$ grep -n -w -E "sorry|native_decide|axiom" MathathonProblems/P67_Monsky.lean   (the only hit is the official header comment)
+10:one file, inside `namespace Mathathon.P67`; the proof is replaced by `sorry`. Two changes for
+
+$ diff reference/P67_Monsky.lean.official MathathonProblems/P67_Monsky.lean | grep -v "^>"
+15a16
+36a38,408
+44c416,432
+<   sorry
+---
